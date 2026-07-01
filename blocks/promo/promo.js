@@ -22,7 +22,9 @@ function getData(block) {
 }
 
 export default function decorate(block) {
-  const { title, body, ctaText, ctaHref } = getData(block);
+  const {
+    title, body, ctaText, ctaHref,
+  } = getData(block);
 
   block.innerHTML = `
     <div class="promo-inner">
