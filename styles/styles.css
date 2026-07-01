@@ -19,6 +19,10 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
+  /* brand colors (approved palette) */
+  --brand-navy: #000a62;
+  --brand-white: #fff;
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
@@ -322,4 +326,25 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/*
+ * Brand color sections.
+ * Apply with a Section Metadata block: Style | Brand Navy
+ * Add a new approved color by defining a new `.section.brand-*` rule below.
+ */
+main .section.brand-navy {
+  --text-color: var(--brand-white);
+  --link-color: var(--brand-white);
+  --link-hover-color: var(--brand-white);
+
+  background-color: var(--brand-navy);
+  color: var(--brand-white);
+  margin: 0;
+  padding: 56px 0;
+}
+
+/* only recolor links in default content; blocks manage their own colors */
+main .section.brand-navy .default-content-wrapper a:any-link {
+  color: var(--brand-white);
 }
