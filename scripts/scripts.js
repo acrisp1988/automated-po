@@ -13,7 +13,7 @@ import {
 } from './aem.js';
 
 /**
- * load fonts.css and set a session storage flag
+ * load fonts.css and set a session storage flag etcc
  */
 async function loadFonts() {
   await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
